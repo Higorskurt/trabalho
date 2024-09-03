@@ -1,7 +1,7 @@
 1 
-#include <stdio.h>
 
-int main() {
+    #include <stdio.h>
+    int main() {
     int numero;
 
         printf("Digite um número inteiro: ");
@@ -18,32 +18,41 @@ int main() {
 
 
 
+
 2
-int main() {
+
+    #include <stdio.h>
+    int main() {
     int N, soma = 0;
 
+    // Solicita ao usuário que insira um número N
     printf("Digite um número inteiro positivo N: ");
     scanf("%d", &N);
 
+    // Verifica se o número é positivo
     if (N < 1) {
         printf("Por favor, insira um número positivo.\n");
-        return 1;
+        return 1; // Encerra o programa com código de erro
     }
 
+    // Calcula a soma de 1 a N
     for (int i = 1; i <= N; i++) {
         soma += i;
     }
 
+    // Exibe o resultado
     printf("A soma dos números de 1 a %d é %d.\n", N, soma);
 
     return 0;
 }
 
-3
-#include <stdio.h>
-#include <stdbool.h>
 
-bool ehPrimo(int num) {
+
+3
+
+    #include <stdio.h>
+    #include <stdbool.h>
+    bool ehPrimo(int num) {
     if (num <= 1) return false;
     if (num <= 3) return true;
     if (num % 2 == 0 || num % 3 == 0) return false;
@@ -51,9 +60,9 @@ bool ehPrimo(int num) {
         if (num % i == 0 || num % (i + 2) == 0) return false;
     }
     return true;
-}
+    }
 
-int main() {
+    int main() {
     int numero;
 
     printf("Digite um número inteiro: ");
@@ -66,12 +75,12 @@ int main() {
     }
 
     return 0;
-}
+    }
 
 4
-#include <stdio.h>
 
-int main() {
+    #include <stdio.h>
+    int main() {
     int numero;
 
     printf("Digite um número inteiro: ");
@@ -83,13 +92,13 @@ int main() {
     }
 
     return 0;
-}
+    }
 
-5 
-#include <stdio.h>
-#include <string.h>
+5                 
 
-int main() {
+    #include <stdio.h>
+    #include <string.h>
+    int main() {
     char str[100];
     int length, i;
 
@@ -109,19 +118,20 @@ int main() {
     printf("\n");
 
     return 0;
-}
+    }
 
 6
-#include <stdio.h>
 
-int fatorial(int n) {
+    #include <stdio.h>
+
+    int fatorial(int n) {
     if (n == 0 || n == 1) {
         return 1;
     }
     return n * fatorial(n - 1);
-}
+    }
 
-int main() {
+    int main() {
     int numero;
 
     printf("Digite um número inteiro não negativo: ");
@@ -135,12 +145,12 @@ int main() {
     printf("O fatorial de %d é %d.\n", numero, fatorial(numero));
 
     return 0;
-}
-
+    }
 7
-#include <stdio.h>
 
-int main() {
+    #include <stdio.h>
+
+    int main() {
     int array[10];
     int i, maior, menor;
 
@@ -164,14 +174,15 @@ int main() {
     printf("O menor valor é %d.\n", menor);
 
     return 0;
-}
+    }
 
 8
-#include <stdio.h>
 
-#define N 10
+     #include <stdio.h>
 
-void bubbleSort(int array[], int n) {
+    #define N 10
+
+    void bubbleSort(int array[], int n) {
     int i, j, temp;
     for (i = 0; i < n - 1; i++) {
         for (j = 0; j < n - i - 1; j++) {
@@ -183,9 +194,9 @@ void bubbleSort(int array[], int n) {
             }
         }
     }
-}
+    }
 
-int main() {
+    int main() {
     int array[N];
     int i;
 
@@ -203,29 +214,31 @@ int main() {
     printf("\n");
 
     return 0;
-}
+    }
 
 9
-#include <stdio.h>
 
-int main() {
+    #include <stdio.h>
+
+    int main() {
     float celsius, fahrenheit;
 
-    printf("Digite a temperatura em graus Celsius: ");
+    printf(": ");
     scanf("%f", &celsius);
 
     fahrenheit = (celsius * 9 / 5) + 32;
 
-    printf("A temperatura em Fahrenheit é %.2f.\n", fahrenheit);
+    printf(" %.2f.\n", fahrenheit);
 
     return 0;
-}
+    }
 
 10
-#include <stdio.h>
-#include <ctype.h>
 
-int contarVogais(const char *str) {
+    #include <stdio.h>
+    #include <ctype.h>
+
+    int contarVogais(const char *str) {
     int count = 0;
     char ch;
     while ((ch = *str++) != '\0') {
@@ -235,9 +248,9 @@ int contarVogais(const char *str) {
         }
     }
     return count;
-}
+    }
 
-int main() {
+    int main() {
     char str[100];
 
     printf("Digite uma string: ");
@@ -248,4 +261,4 @@ int main() {
     printf("Número de vogais na string: %d\n", numVogais);
 
     return 0;
-}
+    }
